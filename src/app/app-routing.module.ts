@@ -11,6 +11,46 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'landing',
+    loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
+  },
+  {
+    path: 'item-details',
+    loadChildren: () => import('./item-details/item-details.module').then( m => m.ItemDetailsPageModule)
+  },
+  {
+    path: 'my-cart',
+    loadChildren: () => import('./my-cart/my-cart.module').then( m => m.MyCartPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'my-orders',
+    loadChildren: () => import('./my-orders/my-orders.module').then( m => m.MyOrdersPageModule)
+  },
+  {
+    path: 'favorite',
+    loadChildren: () => import('./favorite/favorite.module').then( m => m.FavoritePageModule)
+  },
+  {
+    path: 'checkout',
+    loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule)
+  },
+  {
+    path: 'confirm',
+    loadChildren: () => import('./confirm/confirm.module').then( m => m.ConfirmPageModule)
+  },
 ];
 
 @NgModule({
